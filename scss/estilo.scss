@@ -1,0 +1,48 @@
+$bg: #b97c0a;
+$claro:#ffffff;
+*{
+    padding:0;
+    margin: 0;
+    box-sizing: border-box; 
+  }
+body{
+  font-family: 'Montserrat', sans-serif;
+  }
+  h1,h2,h3,h4,h5{
+      font-family: 'Saira Condensed', sans-serif;    
+  }
+.header{
+  &.h1{
+    padding: 10px;
+    background-color: #b97c0a;
+    font-family: 'Saira Condensed', sans-serif;
+    font-size:xx-large;
+  }
+  &.nav{
+    width: 100%;
+    height: 80px;
+    margin: 0 auto;
+    background-color: rgb(27, 26, 26);
+    display: flex;
+    justify-content: space-between;
+    position: fixed;
+    &.ul{
+      color:rgb(185, 124, 10);
+      display: flex;
+      align-items: center;
+      padding: 10px;
+      &.a{
+        color:rgb(185, 124, 10);
+        text-decoration: none; 
+        padding: 2rem;
+        &.li:hover{
+          background-color:rgb(185, 124, 10);
+          color:rgb(27, 26, 26);
+          border-radius: 2.5em;
+        }
+      }
+    }
+  }
+}
+
+    
