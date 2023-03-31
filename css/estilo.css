@@ -9,30 +9,173 @@ body {
 h1, h2, h3, h4, h5 {
   font-family: 'Saira Condensed', sans-serif; }
 
-.header.h1 {
-  padding: 10px;
+/* ---------------------------header-------------------- */
+.navbar-brand {
   background-color: #b97c0a;
   font-family: 'Saira Condensed', sans-serif;
-  font-size: xx-large; }
+  font-size: 2em;
+  padding: 10px; }
 
-.header.nav {
-  width: 100%;
-  height: 80px;
-  margin: 0 auto;
-  background-color: #1b1a1a;
+nav.navbar.navbar {
+  background-color: #1b1a1a; }
+
+li.nav-item {
   display: flex;
-  justify-content: space-between;
-  position: fixed; }
-  .header.nav.ul {
+  align-self: start;
+  color: #b97c0a;
+  display: flex;
+  align-items: center;
+  padding: 0px 80px; }
+
+.navbar-nav .nav-link.active, .navbar-nav .show > .nav-link {
+  color: #b97c0a;
+  padding: 20px; }
+
+a.nav-link.active:hover {
+  background-color: #b97c0a;
+  color: #1b1a1a;
+  border-radius: 2.5em; }
+
+/* ------------------------------main------------------------- */
+video {
+  width: 100%; }
+
+img {
+  width: 100%;
+  height: auto; }
+
+.carousel-caption {
+  color: black;
+  font-size: 1.5rem; }
+
+.intro {
+  text-align: center;
+  font-size: 1.1rem; }
+
+/* --------------------------footer------------------------- */
+footer {
+  background-color: #1b1a1a;
+  height: 90px;
+  padding-top: 30px;
+  color: #b97c0a; }
+
+footer p {
+  text-align: center;
+  margin: 10px; }
+
+.icon {
+  display: flex;
+  justify-content: space-around;
+  margin-bottom: 10px; }
+
+/* ------------------------------contacto----------------------- */
+h2 {
+  text-align: center;
+  padding: 20px; }
+
+h4 {
+  text-align: right;
+  padding-right: 30px;
+  color: black; }
+
+a {
+  text-decoration: none; }
+
+.container {
+  display: grid;
+  grid-template-columns: 1fr 1fr 1fr;
+  grid-template-rows: 0.7fr 1.8fr 0.5fr;
+  gap: 0px 0px;
+  grid-auto-flow: row;
+  grid-template-areas: "h2 h2 h2" "form map date" "form map date"; }
+
+.h2 {
+  grid-area: h2; }
+
+.form {
+  grid-area: form; }
+
+.map {
+  grid-area: map; }
+
+.date {
+  grid-area: date; }
+
+.form-action {
+  display: flex;
+  flex-direction: column;
+  justify-content: center; }
+
+label {
+  margin: 10px; }
+
+input {
+  margin: 15px; }
+
+div.maps {
+  padding: 20px; }
+
+div.date {
+  padding: 20px; }
+
+/* --------------------------proyectos------------------------- */
+div.col-6 {
+  padding: 20px; }
+
+.img1 {
+  opacity: .4;
+  border: black double; }
+
+.img1:hover {
+  opacity: 1; }
+
+.project:hover {
+  border: solid white 3px; }
+
+.img1 p {
+  padding: 20px; }
+
+/* --------------------------------------media query mobile------------------------------------------------- */
+@media screen and (max-width: 767px) {
+  /* -------------------------header------------------------------- */
+  .navbar-brand {
+    font-size: x-large;
+    padding: 10px;
+    margin: 0%; }
+  button.navbar-toggler.collapsed {
+    background-color: #1b1a1a; }
+  .navbar-toggler-icon {
+    background-color: #b97c0a; }
+  li.nav-item {
     color: #b97c0a;
-    display: flex;
-    align-items: center;
+    padding: 5px; }
+  a.nav-link {
     padding: 10px; }
-    .header.nav.ul.a {
-      color: #b97c0a;
-      text-decoration: none;
-      padding: 2rem; }
-      .header.nav.ul.a.li:hover {
-        background-color: #b97c0a;
-        color: #1b1a1a;
-        border-radius: 2.5em; }
+  a.nav-link.active:hover {
+    background-color: #b97c0a;
+    color: #1b1a1a;
+    border-radius: 2.5em; }
+  /* -------------------------main---------------------------------*/
+  .carousel-caption {
+    color: black;
+    font-size: 0.5rem; }
+  .intro {
+    text-align: center;
+    font-size: 1rem; }
+  /* -----------------------contacto------------------------------- */
+  .container {
+    display: grid;
+    grid-template-columns: 0.3fr;
+    grid-template-rows: .03fr 0.1fr 0.05fr 0.05fr;
+    grid-auto-columns: 1fr;
+    gap: 0px 0px;
+    grid-auto-flow: row;
+    grid-template-areas: "h2" "form" "maps" "date"; }
+  .h2 {
+    grid-area: h2; }
+  .form {
+    grid-area: form; }
+  .maps {
+    grid-area: maps; }
+  .date {
+    grid-area: date; } }
