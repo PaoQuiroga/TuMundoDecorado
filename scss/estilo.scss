@@ -1,47 +1,8 @@
-$bg: #b97c0a;
-$claro:#ffffff;
-*{
-  padding:0;
-  margin: 0;
-  box-sizing: border-box; 
-}
-body{
-    font-family: 'Montserrat', sans-serif;
-}
-h1,h2,h3,h4,h5{
-    font-family: 'Saira Condensed', sans-serif;    
-}
-
-/* ---------------------------header-------------------- */
-.navbar-brand{
-    background-color: rgb(185, 124, 10);
-    font-family: 'Saira Condensed', sans-serif;
-    font-size:2em;   
-    padding: 10px;
-}
-
-nav.navbar.navbar{
-    background-color: rgb(27, 26, 26);
-}
-li.nav-item{
-    display: flex;
-    align-self: start;
-    color:rgb(185, 124, 10);
-    display: flex;
-    align-items: center;
-    padding: 0px 80px;
-}
-.navbar-nav .nav-link.active, .navbar-nav .show>.nav-link {
-    color:rgb(185, 124, 10) ;
-    padding: 20px; 
-}
-a.nav-link.active:hover{
-    background-color:rgb(185, 124, 10);
-    color:rgb(27, 26, 26);
-    border-radius: 2.5em;
-}    
+@import "variables";
+@import "header";
 
 /* ------------------------------main------------------------- */
+
 video{
     width: 100%;
 }
@@ -63,16 +24,18 @@ footer{
     background-color:rgb(27, 26, 26); 
     height: 90px;
     padding-top: 30px;
-    color:rgb(185, 124, 10); 
-}
-footer p{
-    text-align: center;
-    margin: 10px;
-}
+    color: $color-bg; 
+
+        & p{
+                text-align: center;
+                margin: 10px;
+        }
+    }
+    
 .icon{
-    display: flex;
-    justify-content: space-around; 
-    margin-bottom: 10px;
+        display: flex;
+        justify-content: space-around; 
+        margin-bottom: 10px;
 }
 
 /* ------------------------------contacto----------------------- */
@@ -88,7 +51,8 @@ h4{
 a{
     text-decoration: none;
 }
-.container { 
+
+.container{ 
     display: grid;
     grid-template-columns: 1fr 1fr 1fr;
     grid-template-rows: 0.7fr 1.8fr 0.5fr;
@@ -105,6 +69,17 @@ a{
 }  
 .form { 
     grid-area:form; 
+    &.action{
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        label{
+            margin: 20px;
+            input{
+                margin: 15px;
+            }   
+        } 
+    }  
 } 
 .map { 
     grid-area:map; 
@@ -112,17 +87,7 @@ a{
 .date { 
     grid-area: date; 
 }   
-.form-action{
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
-}  
-label{
-    margin: 10px;
-} 
-input{
-    margin: 15px;
-}   
+
 div.maps{
     padding: 20px;
 }
@@ -139,16 +104,19 @@ div.col-6{
 .img1{
     opacity: .4;
     border: black double; 
+    &:hover{
+        opacity: 1;
+    }
+
+    & p{
+        padding: 20px;
+    }
 }
-.img1:hover{
-    opacity: 1;
-}
+
 .project:hover{
     border: solid white 3px;
 }
-.img1 p{
-    padding: 20px;
-}
+
 
 /* --------------------------------------media query mobile------------------------------------------------- */
 
@@ -164,17 +132,17 @@ div.col-6{
         background-color: rgb(27, 26, 26);
     }
     .navbar-toggler-icon{
-        background-color:rgb(185, 124, 10);
+        background-color:$color-bg;
     }
     li.nav-item{
-        color:rgb(185, 124, 10);
+        color:$color-bg;
         padding: 5px;
     } 
     a.nav-link{
         padding: 10px;
     }
     a.nav-link.active:hover{
-        background-color:rgb(185, 124, 10);
+        background-color:$color-bg;
         color:rgb(27, 26, 26);
         border-radius: 2.5em;
     }
@@ -192,7 +160,7 @@ div.col-6{
     .container{
         display: grid;
         grid-template-columns: 0.3fr;
-        grid-template-rows: .03fr 0.1fr 0.05fr 0.05fr;
+        grid-template-rows: 0.03fr 0.1fr 0.05fr 0.05fr;
         grid-auto-columns: 1fr;
         gap: 0px 0px;
         grid-auto-flow: row;
@@ -201,20 +169,19 @@ div.col-6{
           "form"
           "maps"
           "date";
-      }
-      .h2 { 
-        grid-area: h2; 
-    }
-      .form { 
-        grid-area: form; 
-    }
-      .maps { 
-        grid-area: maps; 
-    }
-      .date { 
-        grid-area: date; 
-    }
-      
-    
-}
 
+          .h2 { 
+            grid-area: h2; 
+        }
+          .form { 
+            grid-area: form; 
+        }
+          .maps { 
+            grid-area: maps; 
+        }
+          .date { 
+            grid-area: date; 
+        }
+    } 
+} 
+/* -------------------------footer------------------------------------ */

@@ -1,15 +1,14 @@
+body {
+  font-family: 'Montserrat', sans-serif; }
+
 * {
   padding: 0;
   margin: 0;
   box-sizing: border-box; }
 
-body {
-  font-family: 'Montserrat', sans-serif; }
-
 h1, h2, h3, h4, h5 {
   font-family: 'Saira Condensed', sans-serif; }
 
-/* ---------------------------header-------------------- */
 .navbar-brand {
   background-color: #b97c0a;
   font-family: 'Saira Condensed', sans-serif;
@@ -58,10 +57,9 @@ footer {
   height: 90px;
   padding-top: 30px;
   color: #b97c0a; }
-
-footer p {
-  text-align: center;
-  margin: 10px; }
+  footer p {
+    text-align: center;
+    margin: 10px; }
 
 .icon {
   display: flex;
@@ -87,30 +85,29 @@ a {
   grid-template-rows: 0.7fr 1.8fr 0.5fr;
   gap: 0px 0px;
   grid-auto-flow: row;
-  grid-template-areas: "h2 h2 h2" "form map date" "form map date"; }
+  grid-template-areas: "h2 h2 h2"
+ "form map date"
+ "form map date"; }
 
 .h2 {
   grid-area: h2; }
 
 .form {
   grid-area: form; }
+  .form.action {
+    display: flex;
+    flex-direction: column;
+    justify-content: center; }
+    .form.action label {
+      margin: 20px; }
+      .form.action label input {
+        margin: 15px; }
 
 .map {
   grid-area: map; }
 
 .date {
   grid-area: date; }
-
-.form-action {
-  display: flex;
-  flex-direction: column;
-  justify-content: center; }
-
-label {
-  margin: 10px; }
-
-input {
-  margin: 15px; }
 
 div.maps {
   padding: 20px; }
@@ -125,15 +122,14 @@ div.col-6 {
 .img1 {
   opacity: .4;
   border: black double; }
-
-.img1:hover {
-  opacity: 1; }
+  
+  .img1:hover {
+    opacity: 1; }
+  .img1 p {
+    padding: 20px; }
 
 .project:hover {
   border: solid white 3px; }
-
-.img1 p {
-  padding: 20px; }
 
 /* --------------------------------------media query mobile------------------------------------------------- */
 @media screen and (max-width: 767px) {
@@ -166,16 +162,21 @@ div.col-6 {
   .container {
     display: grid;
     grid-template-columns: 0.3fr;
-    grid-template-rows: .03fr 0.1fr 0.05fr 0.05fr;
+    grid-template-rows: 0.03fr 0.1fr 0.05fr 0.05fr;
     grid-auto-columns: 1fr;
     gap: 0px 0px;
     grid-auto-flow: row;
-    grid-template-areas: "h2" "form" "maps" "date"; }
-  .h2 {
-    grid-area: h2; }
-  .form {
-    grid-area: form; }
-  .maps {
-    grid-area: maps; }
-  .date {
-    grid-area: date; } }
+    grid-template-areas: "h2"
+ "form"
+ "maps"
+ "date"; }
+    .container .h2 {
+      grid-area: h2; }
+    .container .form {
+      grid-area: form; }
+    .container .maps {
+      grid-area: maps; }
+    .container .date {
+      grid-area: date; } }
+
+/* -------------------------footer------------------------------------ */

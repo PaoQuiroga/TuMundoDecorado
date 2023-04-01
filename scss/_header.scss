@@ -1,0 +1,28 @@
+.navbar-brand{
+    background-color:$color-bg;
+    font-family: 'Saira Condensed', sans-serif;
+    font-size:2em;   
+    padding: 10px;
+}
+
+nav.navbar.navbar{
+    background-color: rgb(27, 26, 26);
+}
+li.nav-item{
+    display: flex;
+    align-self: start;
+    color:$color-bg;
+    display: flex;
+    align-items: center;
+    padding: 0px 80px;
+    
+}
+.navbar-nav .nav-link.active, .navbar-nav .show>.nav-link {
+    color:$color-bg ;
+    padding: 20px; 
+}
+a.nav-link.active:hover{
+    background-color:$color-bg;
+    color:rgb(27, 26, 26);
+    border-radius: 2.5em;
+}    
