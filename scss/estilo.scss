@@ -3,117 +3,144 @@
 
 /* ------------------------------main------------------------- */
 
-video{
+video {
     width: 100%;
 }
-img{
+
+img {
     width: 100%;
     height: auto;
-} 
-.carousel-caption{
-    color:black;
+}
+
+.carousel-caption {
+    color: black;
     font-size: 1.5rem;
 }
-.intro{
+
+.intro {
     text-align: center;
     font-size: 1.1rem;
 }
 
 /* --------------------------footer------------------------- */
-footer{
-    background-color:rgb(27, 26, 26); 
-    height: 90px;
-    padding-top: 30px;
-    color: $color-bg; 
+footer {
+    background-color: rgb(27, 26, 26);
+    height: 100px;
+    color: $color-bg;
 
-        & p{
-                text-align: center;
-                margin: 10px;
+    & p {
+        font-size: 1.2rem;
+        text-align: center;
+        margin: 10px 10px 0px 10px;
+    }
+}
+
+.button {
+    display: flex;
+    justify-content: space-around;
+
+    a.bi.bi {
+        text-decoration: none;
+        font-size: 20px;
+        text-align: center;
+        color:$color-bg;
+        border-radius: 50%; 
+        transition: all .4s ease-in-out;  
+        &:hover{
+            transform: scale(1.7);
         }
     }
     
-.icon{
-        display: flex;
-        justify-content: space-around; 
-        margin-bottom: 10px;
 }
 
+
 /* ------------------------------contacto----------------------- */
-h2{
+h2 {
     text-align: center;
     padding: 20px;
 }
-h4{
+
+h4 {
     text-align: right;
     padding-right: 30px;
     color: black;
 }
-a{
+
+a {
     text-decoration: none;
 }
 
-.container{ 
+.container {
     display: grid;
     grid-template-columns: 1fr 1fr 1fr;
     grid-template-rows: 0.7fr 1.8fr 0.5fr;
     gap: 0px 0px;
     grid-auto-flow: row;
     grid-template-areas:
-      "h2 h2 h2"
-      "form map date"
-      "form map date";
-  }
-  
-.h2 { 
-    grid-area:h2; 
-}  
-.form { 
-    grid-area:form; 
-    &.action{
+        "h2 h2 h2"
+        "form map date"
+        "form map date";
+}
+
+.h2 {
+    grid-area: h2;
+}
+
+.form {
+    grid-area: form;
+
+    &.action {
         display: flex;
         flex-direction: column;
         justify-content: center;
-        label{
-            margin: 20px;
-            input{
-                margin: 15px;
-            }   
-        } 
-    }  
-} 
-.map { 
-    grid-area:map; 
-} 
-.date { 
-    grid-area: date; 
-}   
 
-div.maps{
+        label {
+            margin: 20px;
+
+            input {
+                margin: 15px;
+            }
+        }
+    }
+}
+
+.map {
+    grid-area: map;
+}
+
+.date {
+    grid-area: date;
+}
+
+div.maps {
     padding: 20px;
 }
-div.date{
+
+div.date {
     padding: 20px;
 }
 
 /* --------------------------proyectos------------------------- */
 
-div.col-6{
+div.col-6 {
     padding: 20px;
-
+    
 }
-.img1{
+
+.img1 {
     opacity: .4;
-    border: black double; 
-    &:hover{
+    border: black double;
+
+    &:hover {
         opacity: 1;
     }
 
-    & p{
+    & p {
         padding: 20px;
     }
 }
 
-.project:hover{
+.project:hover {
     border: solid white 3px;
 }
 
@@ -121,43 +148,51 @@ div.col-6{
 /* --------------------------------------media query mobile------------------------------------------------- */
 
 @media screen and (max-width: 767px) {
-     
+
     /* -------------------------header------------------------------- */
-    .navbar-brand{
-        font-size:x-large;   
+    .navbar-brand {
+        font-size: xx-large;
         padding: 10px;
         margin: 0%;
     }
-    button.navbar-toggler.collapsed{
+
+    button.navbar-toggler.collapsed {
         background-color: rgb(27, 26, 26);
     }
-    .navbar-toggler-icon{
-        background-color:$color-bg;
+
+    .navbar-toggler-icon {
+        background-color: $color-bg;
     }
-    li.nav-item{
-        color:$color-bg;
+
+    li.nav-item {
+        color: $color-bg;
         padding: 5px;
-    } 
-    a.nav-link{
+    }
+
+    a.nav-link {
         padding: 10px;
     }
-    a.nav-link.active:hover{
-        background-color:$color-bg;
-        color:rgb(27, 26, 26);
+
+    a.nav-link.active:hover {
+        font-size: 1rem;
+        background-color: $color-bg;
+        color: rgb(27, 26, 26);
         border-radius: 2.5em;
     }
+
     /* -------------------------main---------------------------------*/
-    .carousel-caption{
+    .carousel-caption {
         color: black;
         font-size: 0.5rem;
     }
-    .intro{
+
+    .intro {
         text-align: center;
         font-size: 1rem;
     }
 
     /* -----------------------contacto------------------------------- */
-    .container{
+    .container {
         display: grid;
         grid-template-columns: 0.3fr;
         grid-template-rows: 0.03fr 0.1fr 0.05fr 0.05fr;
@@ -165,23 +200,39 @@ div.col-6{
         gap: 0px 0px;
         grid-auto-flow: row;
         grid-template-areas:
-          "h2"
-          "form"
-          "maps"
-          "date";
+            "h2"
+            "form"
+            "maps"
+            "date";
 
-          .h2 { 
-            grid-area: h2; 
+        .h2 {
+            grid-area: h2;
         }
-          .form { 
-            grid-area: form; 
+
+        .form {
+            grid-area: form;
         }
-          .maps { 
-            grid-area: maps; 
+
+        .maps {
+            grid-area: maps;
         }
-          .date { 
-            grid-area: date; 
+
+        .date {
+            grid-area: date;
         }
+    }
+
+    /* -------------------------footer------------------------------------ */
+    footer {
+    height: auto;
+
+    & p {
+        font-size: 1rem;
+        margin: 10 10px 0px 10px;
     } 
-} 
-/* -------------------------footer------------------------------------ */
+ }
+
+
+}
+
+

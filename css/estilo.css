@@ -12,7 +12,7 @@ h1, h2, h3, h4, h5 {
 .navbar-brand {
   background-color: #b97c0a;
   font-family: 'Saira Condensed', sans-serif;
-  font-size: 2em;
+  font-size: 3em;
   padding: 10px; }
 
 nav.navbar.navbar {
@@ -54,17 +54,25 @@ img {
 /* --------------------------footer------------------------- */
 footer {
   background-color: #1b1a1a;
-  height: 90px;
-  padding-top: 30px;
+  height: 100px;
   color: #b97c0a; }
   footer p {
+    font-size: 1.2rem;
     text-align: center;
-    margin: 10px; }
+    margin: 10px 10px 0px 10px; }
 
-.icon {
+.button {
   display: flex;
-  justify-content: space-around;
-  margin-bottom: 10px; }
+  justify-content: space-around; }
+  .button a.bi.bi {
+    text-decoration: none;
+    font-size: 20px;
+    text-align: center;
+    color: #b97c0a;
+    border-radius: 50%;
+    transition: all .4s ease-in-out; }
+    .button a.bi.bi:hover {
+      transform: scale(1.7); }
 
 /* ------------------------------contacto----------------------- */
 h2 {
@@ -85,9 +93,7 @@ a {
   grid-template-rows: 0.7fr 1.8fr 0.5fr;
   gap: 0px 0px;
   grid-auto-flow: row;
-  grid-template-areas: "h2 h2 h2"
- "form map date"
- "form map date"; }
+  grid-template-areas: "h2 h2 h2" "form map date" "form map date"; }
 
 .h2 {
   grid-area: h2; }
@@ -122,7 +128,6 @@ div.col-6 {
 .img1 {
   opacity: .4;
   border: black double; }
-  
   .img1:hover {
     opacity: 1; }
   .img1 p {
@@ -135,7 +140,7 @@ div.col-6 {
 @media screen and (max-width: 767px) {
   /* -------------------------header------------------------------- */
   .navbar-brand {
-    font-size: x-large;
+    font-size: xx-large;
     padding: 10px;
     margin: 0%; }
   button.navbar-toggler.collapsed {
@@ -148,6 +153,7 @@ div.col-6 {
   a.nav-link {
     padding: 10px; }
   a.nav-link.active:hover {
+    font-size: 1rem;
     background-color: #b97c0a;
     color: #1b1a1a;
     border-radius: 2.5em; }
@@ -166,10 +172,7 @@ div.col-6 {
     grid-auto-columns: 1fr;
     gap: 0px 0px;
     grid-auto-flow: row;
-    grid-template-areas: "h2"
- "form"
- "maps"
- "date"; }
+    grid-template-areas: "h2" "form" "maps" "date"; }
     .container .h2 {
       grid-area: h2; }
     .container .form {
@@ -177,6 +180,10 @@ div.col-6 {
     .container .maps {
       grid-area: maps; }
     .container .date {
-      grid-area: date; } }
-
-/* -------------------------footer------------------------------------ */
+      grid-area: date; }
+  /* -------------------------footer------------------------------------ */
+  footer {
+    height: auto; }
+    footer p {
+      font-size: 1rem;
+      margin: 10 10px 0px 10px; } }
