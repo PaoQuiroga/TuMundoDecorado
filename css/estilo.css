@@ -77,49 +77,29 @@ footer {
 /* ------------------------------contacto----------------------- */
 h2 {
   text-align: center;
-  padding: 20px; }
+  padding: 20px;
+  font-size: 1.5em; }
 
-h4 {
-  text-align: right;
-  padding-right: 30px;
-  color: black; }
+div.container-info {
+  display: flex;
+  justify-items: center; }
 
-a {
-  text-decoration: none; }
+div.form-contac {
+  width: 35%;
+  margin: 30px;
+  padding: 40px; }
+  div.form-contac label {
+    font-size: 20px;
+    width: 100%; }
+    div.form-contac label input-textarea {
+      margin-bottom: 20px;
+      width: 100%;
+      padding: 10px; }
 
-.container {
-  display: grid;
-  grid-template-columns: 1fr 1fr 1fr;
-  grid-template-rows: 0.7fr 1.8fr 0.5fr;
-  gap: 0px 0px;
-  grid-auto-flow: row;
-  grid-template-areas: "h2 h2 h2" "form map date" "form map date"; }
-
-.h2 {
-  grid-area: h2; }
-
-.form {
-  grid-area: form; }
-  .form.action {
-    display: flex;
-    flex-direction: column;
-    justify-content: center; }
-    .form.action label {
-      margin: 20px; }
-      .form.action label input {
-        margin: 15px; }
-
-.map {
-  grid-area: map; }
-
-.date {
-  grid-area: date; }
-
-div.maps {
-  padding: 20px; }
-
-div.date {
-  padding: 20px; }
+input:hover {
+  transform: translate(-2px);
+  color: #b97c0a;
+  transition: all 0.4s ease; }
 
 /* --------------------------proyectos------------------------- */
 div.col-6 {
@@ -165,22 +145,28 @@ div.col-6 {
     text-align: center;
     font-size: 1rem; }
   /* -----------------------contacto------------------------------- */
-  .container {
-    display: grid;
-    grid-template-columns: 0.3fr;
-    grid-template-rows: 0.03fr 0.1fr 0.05fr 0.05fr;
-    grid-auto-columns: 1fr;
-    gap: 0px 0px;
-    grid-auto-flow: row;
-    grid-template-areas: "h2" "form" "maps" "date"; }
-    .container .h2 {
-      grid-area: h2; }
-    .container .form {
-      grid-area: form; }
-    .container .maps {
-      grid-area: maps; }
-    .container .date {
-      grid-area: date; }
+  div.container-info {
+    display: flex;
+    flex-direction: column;
+    align-items: center; }
+  div.form-contac {
+    width: 35%;
+    margin: 30px;
+    padding: 40px; }
+    div.form-contac label {
+      font-size: 20px;
+      width: 100%; }
+      div.form-contac label input-textarea {
+        margin-bottom: 20px;
+        width: 100%;
+        padding: 10px; }
+  input:hover {
+    transform: translate(-2px);
+    color: #b97c0a;
+    transition: all 0.4s ease; }
+  div.map-iframe {
+    width: 250px;
+    height: 150px; }
   /* -------------------------footer------------------------------------ */
   footer {
     height: auto; }
