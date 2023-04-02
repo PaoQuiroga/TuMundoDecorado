@@ -164,19 +164,9 @@ div.col-6 {
         align-items: center;
     }
     div.form-contac{
-        width: 35%;
+        width: 50%;
         margin: 30px;
-        padding: 40px;
-        label {
-            font-size: 20px;
-            width: 100%;
-            input-textarea {
-              margin-bottom: 20px;
-              width: 100%;
-              padding: 10px;
-            }
-        }
-    
+        padding: 40px
     }
     
     input:hover {
@@ -184,10 +174,8 @@ div.col-6 {
         color: $color-bg;
         transition: all 0.4s ease;
     }
-    
-div.map-iframe{
-    width: 250px;
-    height: 150px;
+div.date{
+    padding: 20px;
 }
 
     /* -------------------------footer------------------------------------ */
