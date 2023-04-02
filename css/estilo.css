@@ -32,6 +32,7 @@ li.nav-item {
 
 a.nav-link.active:hover {
   background-color: #b97c0a;
+  text-decoration: solid;
   color: #1b1a1a;
   border-radius: 2.5em; }
 

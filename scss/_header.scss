@@ -23,6 +23,7 @@ li.nav-item{
 }
 a.nav-link.active:hover{
     background-color:$color-bg;
+    text-decoration: solid;
     color:rgb(27, 26, 26);
     border-radius: 2.5em;
 }    
