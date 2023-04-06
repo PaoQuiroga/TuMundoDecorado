@@ -43,14 +43,15 @@ footer {
         text-decoration: none;
         font-size: 20px;
         text-align: center;
-        color:$color-bg;
-        border-radius: 50%; 
-        transition: all .4s ease-in-out;  
-        &:hover{
+        color: $color-bg;
+        border-radius: 50%;
+        transition: all .4s ease-in-out;
+
+        &:hover {
             transform: scale(1.7);
         }
     }
-    
+
 }
 
 
@@ -61,23 +62,31 @@ h2 {
     font-size: 1.5em;
 }
 
-div.container-info{
+div.container-info {
     display: flex;
-    justify-items: center;
+    flex-direction: row;
+    align-items: center;
 }
-div.form-contac{
-    width: 35%;
-    margin: 30px;
+
+div.form-contac {
+    width: 40%;
     padding: 40px;
+
     label {
         font-size: 20px;
         width: 100%;
+
         input-textarea {
-          margin-bottom: 20px;
-          width: 100%;
-          padding: 10px;
+            margin-bottom: 20px;
+            width: 100%;
+            padding: 10px;
         }
     }
+}
+
+input {
+    padding: 5px;
+
 }
 
 input:hover {
@@ -86,16 +95,39 @@ input:hover {
     transition: all 0.4s ease;
 }
 
+div.date {
+    padding: 70px;
+}
+
 /* --------------------------proyectos------------------------- */
 
-div.col-6 {
+h2 {
+    text-align: center;
     padding: 20px;
+    font-size: 2em;
+}
+
+div.row {
+    display: flex;
+    justify-content: space-around;
+    margin: 0%;
 
 }
 
-.img1 {
+div.col-6 {
+    width: 40%;
+    height: 40%;
+    padding: 10px;
+
+}
+
+div.img1 {
     opacity: .4;
     border: black double;
+
+    .text2 {
+        text-align: center;
+    }
 
     &:hover {
         opacity: 1;
@@ -109,6 +141,52 @@ div.col-6 {
 .project:hover {
     border: solid white 3px;
 }
+
+/* ---------------------------servicios------------------------------- */
+section.section1 {
+    background-image: url(../img/mesa-madera.jpg);
+    height: 500px;
+    background-attachment: fixed;
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+    color: black;
+    text-align: center;
+    padding: 30px;
+    margin: 50px;
+
+    & h2 {
+        font-size: 3em;
+    }
+
+    & p {
+        background-color: #ffffff8c;
+        line-height: 2;
+        padding: 20px;
+    }
+}
+
+
+
+.section2 {
+    background-image: url(../img/cuadros.jpg);
+    height: 500px;
+    background-attachment: fixed;
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+    color: black;
+    text-align: center;
+    padding: 30px;
+    margin: 50px;
+
+    & p {
+        background-color: #ffffff8c;
+        line-height: 2;
+        padding: 20px;
+    }
+}
+
 
 
 /* --------------------------------------media query mobile------------------------------------------------- */
@@ -131,7 +209,6 @@ div.col-6 {
     }
 
     li.nav-item {
-        color: $color-bg;
         padding: 5px;
     }
 
@@ -141,9 +218,7 @@ div.col-6 {
 
     a.nav-link.active:hover {
         font-size: 1rem;
-        background-color: $color-bg;
-        color: rgb(27, 26, 26);
-        border-radius: 2.5em;
+
     }
 
     /* -------------------------main---------------------------------*/
@@ -152,43 +227,86 @@ div.col-6 {
         font-size: 0.5rem;
     }
 
+    h5 {
+        font-size: 1em;
+    }
+
     .intro {
         text-align: center;
         font-size: 1rem;
     }
 
     /* -----------------------contacto------------------------------- */
-    div.container-info{
+    h2 {
+        padding: 10px;
+        font-size: 1.2em;
+    }
+
+    div.container-info {
         display: flex;
         flex-direction: column;
-        align-items: center;
+        justify-items: center;
+        margin: 0px;
     }
-    div.form-contac{
-        width: 50%;
-        margin: 30px;
-        padding: 40px
+
+    div.form-contac {
+        display: flex;
+        padding-bottom: 10px;
     }
-    
+
     input:hover {
         transform: translate(-2px);
         color: $color-bg;
         transition: all 0.4s ease;
     }
-div.date{
-    padding: 20px;
-}
+
+    div.date {
+        text-align: center;
+        padding: 20px;
+    }
+
+    /* --------------------------proyectos------------------------- */
+    div.row {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+
+        div.col-6 {
+            width: 80%;
+            padding: 20px;
+
+        }
+
+    }
+
+    /* -------------------------servicios------------------------------------ */
+
+    section.section1 h2 {
+        font-size: 1.2em;
+        & p {
+            line-height: 1.8;
+            font-size: 16px;
+            padding: 10px;
+        }
+    }
+
+    section.section2 p{
+        line-height: 1.8;
+        font-size: 16px;
+        padding: 10px;
+
+    }
+
 
     /* -------------------------footer------------------------------------ */
     footer {
-    height: auto;
+        height: auto;
 
-    & p {
-        font-size: 1rem;
-        margin: 10 10px 0px 10px;
-    } 
- }
+        & p {
+            font-size: 1rem;
+            margin: 10 10px 0px 10px;
+        }
+    }
 
 
 }
-
-

@@ -36,6 +36,9 @@ a.nav-link.active:hover {
   color: #1b1a1a;
   border-radius: 2.5em; }
 
+ul.dropdown-menu.show {
+  background-color: #b97c0a; }
+
 /* ------------------------------main------------------------- */
 video {
   width: 100%; }
@@ -83,11 +86,11 @@ h2 {
 
 div.container-info {
   display: flex;
-  justify-items: center; }
+  flex-direction: row;
+  align-items: center; }
 
 div.form-contac {
-  width: 35%;
-  margin: 30px;
+  width: 40%;
   padding: 40px; }
   div.form-contac label {
     font-size: 20px;
@@ -97,25 +100,80 @@ div.form-contac {
       width: 100%;
       padding: 10px; }
 
+input {
+  padding: 5px; }
+
 input:hover {
   transform: translate(-2px);
   color: #b97c0a;
   transition: all 0.4s ease; }
 
-/* --------------------------proyectos------------------------- */
-div.col-6 {
-  padding: 20px; }
+div.date {
+  padding: 70px; }
 
-.img1 {
+/* --------------------------proyectos------------------------- */
+h2 {
+  text-align: center;
+  padding: 20px;
+  font-size: 2em; }
+
+div.row {
+  display: flex;
+  justify-content: space-around;
+  margin: 0%; }
+
+div.col-6 {
+  width: 40%;
+  height: 40%;
+  padding: 10px; }
+
+div.img1 {
   opacity: .4;
   border: black double; }
-  .img1:hover {
+  div.img1 .text2 {
+    text-align: center; }
+  div.img1:hover {
     opacity: 1; }
-  .img1 p {
+  div.img1 p {
     padding: 20px; }
 
 .project:hover {
   border: solid white 3px; }
+
+/* ---------------------------servicios------------------------------- */
+section.section1 {
+  background-image: url(../img/mesa-madera.jpg);
+  height: 500px;
+  background-attachment: fixed;
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+  color: black;
+  text-align: center;
+  padding: 30px;
+  margin: 50px; }
+  section.section1 h2 {
+    font-size: 3em; }
+  section.section1 p {
+    background-color: #ffffff8c;
+    line-height: 2;
+    padding: 20px; }
+
+.section2 {
+  background-image: url(../img/cuadros.jpg);
+  height: 500px;
+  background-attachment: fixed;
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+  color: black;
+  text-align: center;
+  padding: 30px;
+  margin: 50px; }
+  .section2 p {
+    background-color: #ffffff8c;
+    line-height: 2;
+    padding: 20px; }
 
 /* --------------------------------------media query mobile------------------------------------------------- */
 @media screen and (max-width: 767px) {
@@ -129,37 +187,58 @@ div.col-6 {
   .navbar-toggler-icon {
     background-color: #b97c0a; }
   li.nav-item {
-    color: #b97c0a;
     padding: 5px; }
   a.nav-link {
     padding: 10px; }
   a.nav-link.active:hover {
-    font-size: 1rem;
-    background-color: #b97c0a;
-    color: #1b1a1a;
-    border-radius: 2.5em; }
+    font-size: 1rem; }
   /* -------------------------main---------------------------------*/
   .carousel-caption {
     color: black;
     font-size: 0.5rem; }
+  h5 {
+    font-size: 1em; }
   .intro {
     text-align: center;
     font-size: 1rem; }
   /* -----------------------contacto------------------------------- */
+  h2 {
+    padding: 10px;
+    font-size: 1.2em; }
   div.container-info {
     display: flex;
     flex-direction: column;
-    align-items: center; }
+    justify-items: center;
+    margin: 0px; }
   div.form-contac {
-    width: 50%;
-    margin: 30px;
-    padding: 40px; }
+    display: flex;
+    padding-bottom: 10px; }
   input:hover {
     transform: translate(-2px);
     color: #b97c0a;
     transition: all 0.4s ease; }
   div.date {
+    text-align: center;
     padding: 20px; }
+  /* --------------------------proyectos------------------------- */
+  div.row {
+    display: flex;
+    flex-direction: column;
+    align-items: center; }
+    div.row div.col-6 {
+      width: 80%;
+      padding: 20px; }
+  /* -------------------------servicios------------------------------------ */
+  section.section1 h2 {
+    font-size: 1.2em; }
+    section.section1 h2 p {
+      line-height: 1.8;
+      font-size: 16px;
+      padding: 10px; }
+  section.section2 p {
+    line-height: 1.8;
+    font-size: 16px;
+    padding: 10px; }
   /* -------------------------footer------------------------------------ */
   footer {
     height: auto; }
