@@ -82,7 +82,7 @@ footer {
 h2 {
   text-align: center;
   padding: 20px;
-  font-size: 1.5em; }
+  font-size: 1.2em; }
 
 div.container-info {
   display: flex;
@@ -112,10 +112,10 @@ div.date {
   padding: 70px; }
 
 /* --------------------------proyectos------------------------- */
-h2 {
+.proyect h2 {
   text-align: center;
   padding: 20px;
-  font-size: 2em; }
+  font-size: 2.5em; }
 
 div.row {
   display: flex;
@@ -176,8 +176,10 @@ section.section1 {
     padding: 20px; }
 
 /* --------------------------------------media query mobile------------------------------------------------- */
-@media screen and (max-width: 767px) {
+@media screen and (max-width: 768px) {
   /* -------------------------header------------------------------- */
+  header {
+    width: 100%; }
   .navbar-brand {
     font-size: xx-large;
     padding: 10px;
@@ -193,6 +195,10 @@ section.section1 {
   a.nav-link.active:hover {
     font-size: 1rem; }
   /* -------------------------main---------------------------------*/
+  main {
+    display: flex;
+    flex-direction: column;
+    width: 100%; }
   .carousel-caption {
     color: black;
     font-size: 0.5rem; }
@@ -212,6 +218,7 @@ section.section1 {
     margin: 0px; }
   div.form-contac {
     display: flex;
+    justify-content: center;
     padding-bottom: 10px; }
   input:hover {
     transform: translate(-2px);
@@ -221,6 +228,8 @@ section.section1 {
     text-align: center;
     padding: 20px; }
   /* --------------------------proyectos------------------------- */
+  .proyect h2 {
+    font-size: 1.2em; }
   div.row {
     display: flex;
     flex-direction: column;
@@ -231,16 +240,17 @@ section.section1 {
   /* -------------------------servicios------------------------------------ */
   section.section1 h2 {
     font-size: 1.2em; }
-    section.section1 h2 p {
-      line-height: 1.8;
-      font-size: 16px;
-      padding: 10px; }
+  section.section1 p {
+    line-height: 1.5;
+    font-size: 16px;
+    padding: 10px; }
   section.section2 p {
-    line-height: 1.8;
+    line-height: 1.5;
     font-size: 16px;
     padding: 10px; }
   /* -------------------------footer------------------------------------ */
   footer {
+    width: 100%;
     height: auto; }
     footer p {
       font-size: 1rem;
