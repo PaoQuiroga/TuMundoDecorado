@@ -59,7 +59,7 @@ footer {
 h2 {
     text-align: center;
     padding: 20px;
-    font-size: 1.2em;
+    font-size: 1.5em;
 }
 
 div.container-info {
@@ -143,6 +143,7 @@ div.img1 {
 }
 
 /* ---------------------------servicios------------------------------- */
+
 section.section1 {
     background-image: url(../img/mesa-madera.jpg);
     height: 500px;
@@ -186,6 +187,25 @@ section.section1 {
         padding: 20px;
     }
 }
+
+/* ---------------------------entregas------------------------------- */
+
+div.text-3{
+    background-image: url(../img/biblioteca.jpg);
+    background-position: center center;
+    background-repeat: no-repeat;
+    background-size: cover;
+    color: black;
+    text-align: center;
+    padding: 90px;
+    margin: 60px;
+    & p {
+        background-color: #ffffffaf;
+        line-height: 2;
+        padding: 80px;
+    }
+}
+
 
 
 
@@ -313,6 +333,15 @@ section.section1 {
 
     }
 
+    div.text-3{
+        margin: 0px;
+        & p{
+           line-height: 1.5;
+           font-size: 16px;
+           padding: 20px;
+
+        }
+    }
 
     /* -------------------------footer------------------------------------ */
     footer {
